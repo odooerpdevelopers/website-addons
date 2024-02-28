@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <record id="add_partners" model="website.page">
+            <field name="name">Become a Partner</field>
+            <field name="is_published" eval="True"/>
+            <field name="key">website_form.add_partners</field>
+            <field name="url">/become-partner</field>
+            <field name="type">qweb</field>
+            <field name="arch" type="xml">
+                <t t-name="website_form.add_partner">
+                    <t t-call="website.layout">
+                        <div id="wrap" class="oe_structure oe_empty"/>
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-lg-6">
+                                    <form action="/add-partner/" method="post" enctype="multipart/form-data">
+                                        <div class="mb-3">
+                                            <label for="name" class="form-label">Name</label>
+                                            <input type="text" class="form-control" id="name"
+                                                   required=""/>
+
+                                        </div>
+                                        <div class="mb-3">
+                                            <label for="email" class="form-label">Email</label>
+                                            <input type="email" class="form-control" id="email" aria-describedby="email" required=""/>
+                                            <div id="emailHelp" class="form-text">We'll never share your email with
+                                                anyone else.
+                                            </div>
+                                        </div>
+                                        <div class="mb-3 form-check">
+                                            <input type="checkbox" class="form-check-input" id="exampleCheck1"/>
+                                            <label class="form-check-label" for="exampleCheck1">Check me out</label>
+                                        </div>
+                                        <button type="submit" class="btn btn-primary">Submit</button>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+
+                    </t>
+
+                </t>
+            </field>
+        </record>
+    </data>
+</odoo>
