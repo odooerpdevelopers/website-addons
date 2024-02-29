@@ -14,16 +14,16 @@
                         <div class="container">
                             <div class="row">
                                 <div class="col-lg-6">
-                                    <form action="/add-partner/" method="post" enctype="multipart/form-data">
+                                    <form action="/add-partner/" method="post" >
                                         <div class="mb-3">
                                             <label for="name" class="form-label">Name</label>
-                                            <input type="text" class="form-control" id="name"
+                                            <input type="text" class="form-control" id="name" name="name"
                                                    required=""/>
 
                                         </div>
                                         <div class="mb-3">
                                             <label for="email" class="form-label">Email</label>
-                                            <input type="email" class="form-control" id="email" aria-describedby="email" required=""/>
+                                            <input type="email" class="form-control" id="email" name="email" aria-describedby="email" required=""/>
                                             <div id="emailHelp" class="form-text">We'll never share your email with
                                                 anyone else.
                                             </div>
@@ -32,7 +32,7 @@
                                             <input type="checkbox" class="form-check-input" id="exampleCheck1"/>
                                             <label class="form-check-label" for="exampleCheck1">Check me out</label>
                                         </div>
-                                        <button type="submit" class="btn btn-primary">Submit</button>
+                                        <button type="submit" class="btn btn-primary mb-2">Submit</button>
                                     </form>
                                 </div>
                             </div>

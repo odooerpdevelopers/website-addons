@@ -1,6 +1,6 @@
 {
     'name': 'Widget Form',
-    'version': '1.0',
+    'version': '1.1',
     'summary': 'JS Widgets, Forms for Odoo Website',
     'description': """
     Widgets in Odoo
