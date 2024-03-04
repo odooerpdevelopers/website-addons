@@ -10,7 +10,9 @@ class AddPartnerController(http.Controller):
 
         partner_vals = {
             'name': post.get('name'),
-            'email': post.get('email')
+            'email': post.get('email'),
+            'country_id': post.get('country_id') if post.get('country_id') != '' else None,
         }
         partner_id = request.env['res.partner'].sudo().create(partner_vals)
+        print(partner_id)
         return request.redirect('/contactus-thank-you')

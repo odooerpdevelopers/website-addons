@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <record id="website_menu_become_partner" model="website.menu">
+            <field name="name">Become Partner</field>
+            <field name="url">/become-partner/</field>
+            <field name="parent_id" ref="website.main_menu"/>
+            <!--<field name="page_id" ref="website_form.add_partners"/>-->
+        </record>
+    </data>
+</odoo>
