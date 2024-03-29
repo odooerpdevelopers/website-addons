@@ -19,7 +19,8 @@
     'auto_install': False,
     'assets': {
         'web.assets_frontend': [
-            'website_form/static/src/js/*.js'
+            'website_form/static/src/js/*.js',
+            'website_form/static/src/scss/*',
         ],
     }
 }

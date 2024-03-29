@@ -25,14 +25,21 @@
                                             <label for="email" class="form-label">Email</label>
                                             <input type="email" class="form-control" id="email" name="email"
                                                    aria-describedby="email" required=""/>
-                                            <div id="emailHelp" class="form-text text-muted">We'll never share your email with
+                                            <div id="emailHelp" class="form-text text-muted">We'll never share your
+                                                email with
                                                 anyone else.
                                             </div>
                                         </div>
                                         <div class="mb-3 d-none" id="show_countries">
-                                           <select class="">
-                                               <option>Select a Country</option>
-                                           </select>
+                                            <t t-set="countries" t-value="request.env['res.country'].search_read([], ['id', 'name'])"/>
+                                            <select class="form-control" name="country_id">
+                                                <option value="">Select Country...</option>
+                                                <t t-foreach="countries" t-as="country">
+                                                    <option t-att-value="country.get('id')">
+                                                        <t t-out="country.get('name')"/>
+                                                    </option>
+                                                </t>
+                                            </select>
                                         </div>
                                         <div class="mb-3 form-check">
                                             <input type="checkbox" name="check_country" class="form-check-input"
