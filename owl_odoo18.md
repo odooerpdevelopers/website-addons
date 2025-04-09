@@ -23,6 +23,43 @@ This guide will walk you through the process of creating a public component usin
 
 ## 🛠️ Step-by-Step Guide to Create the OWL Component
 
+### 0. Module Structure
+
+Before diving into the implementation, ensure your module has the correct directory structure. Here's an example structure for the `elearning_portal` module:
+
+```plaintext
+elearning_portal/
+├── __init__.py
+├── __manifest__.py
+├── controllers/
+│   ├── __init__.py
+│   └── main.py
+├── models/
+│   └── __init__.py
+├── static/
+│   └── src/
+│       └── components/
+│           ├── subscribed_courses.js
+│           └── subscribed_courses.xml
+├── views/
+│   └── portal_template.xml
+```
+
+- **`__init__.py`**: Initializes the module and its sub-packages.
+- **`__manifest__.py`**: Contains the module metadata and dependencies.
+- **`controllers/`**: Holds the Python controllers for handling HTTP requests.
+- **`models/`**: Contains the Python models for database interactions.
+- **`static/`**: Stores static assets like JavaScript, CSS, and XML files for OWL components.
+- **`views/`**: Includes XML files for defining templates and views.
+
+This structure ensures your module is well-organized and adheres to Odoo's best practices.
+
+```bash
+# macOS / linux
+mkdir -p elearning_portal/{models,views,controllers,static/src/components}
+
+```
+
 ### 1. 📦 **Creating the Manifest File**
 
 The `manifest.json` file defines the module and its dependencies. Here's an example manifest for our eLearning portal component:
