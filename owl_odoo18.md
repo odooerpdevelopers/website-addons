@@ -55,9 +55,7 @@ elearning_portal/
 This structure ensures your module is well-organized and adheres to Odoo's best practices.
 
 ```bash
-# macOS / linux
 mkdir -p elearning_portal/{models,views,controllers,static/src/components}
-
 ```
 
 ### 1. 📦 **Creating the Manifest File**
