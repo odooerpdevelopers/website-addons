@@ -180,16 +180,19 @@ In the `subscribed_courses.xml`, define the template for the component.
             </t>
 
             <t t-elif="state.courses.length > 0">
-                <ul class="list-group">
-                    <t t-foreach="state.courses" t-as="course" t-key="course.id">
-                        <li class="list-group-item d-flex justify-content-between align-items-center">
-                            <t t-esc="course.name"/>
-                            <a t-attf-href="/slides/{{ course.id }}" class="btn btn-sm btn-primary">
-                                Go to course <i class="fa fa-arrow-right"/>
-                            </a>
-                        </li>
-                    </t>
-                </ul>
+                <div class="list-group overflow-auto" style="max-height: 350px;">
+                  <t t-foreach="state.courses" t-as="course" t-key="course.id" class="mb-2">
+                      <a class="list-group-item list-group-item-action"
+                          t-attf-href="/slides/{{ course.id }}" style="display: flex; flex-direction: row; gap:5px; align-items: center;">
+
+                          <img style="width: 50px; bject-fit: cover;"
+                              t-attf-src="/web/image/slide.channel/{{ course.id }}/image_128"
+                              class="img-fluid rounded" />
+
+                          <span t-out="course.name" class="text-muted fw-bold" />
+                      </a>
+                  </t>
+                </div>
             </t>
 
             <t t-else="">
