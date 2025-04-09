@@ -26,9 +26,9 @@ publicWidget.registry.AddPartnerWidget = publicWidget.Widget.extend({
 
     _oneClickCheckBox() {
         console.log("click checkbox...")
-        if(this.checkbox.checked){
+        if (this.checkbox.checked) {
             this.$el.find('#show_countries').removeClass('d-none')
-        }else{
+        } else {
             this.$el.find('#show_countries').addClass('d-none')
         }
     },
