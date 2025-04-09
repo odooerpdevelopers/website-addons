@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <!-- Heredamos la plantilla principal del portal -->
+    <template id="portal_my_home_inherited_elearning" inherit_id="portal.portal_my_home">
+        <!-- Buscamos el contenedor principal y añadimos nuestra sección dentro al final -->
+        <xpath expr="//*[hasclass('o_portal_my_home')]" position="inside">
+            <div class="mt-4"> <!-- add margin top -->
+                <h3 class="h3_portal_courses">Mis Cursos (0)</h3>
+                <!--
+                    Insertamos el componente OWL.
+                    - 'name': Nombre con el que registraremos el componente en JS.
+                    - 'props': Pasamos el ID del partner del usuario actual.
+                -->
+                <t t-set="partner_id" t-value="sales_user.partner_id"/>
+                <owl-component
+                        name="elearning_portal.SubscribedCourses"
+                        t-att-props="json.dumps({'partnerId': partner_id.id if partner_id else False })"/>
+            </div>
+        </xpath>
+    </template>
+</odoo>
