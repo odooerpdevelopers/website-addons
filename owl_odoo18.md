@@ -4,7 +4,7 @@ How to create a public OWL component in Odoo 18. It includes both **Spanish and 
 This guide will walk you through the process of creating a public component using the OWL (Odoo Web Library) framework in Odoo 18.
 
 ### 💡 **New Features in OWL Framework (Odoo >=18)**
-- **Changelog**: Always review the official changelog to stay updated.
+- **[Changelog](https://github.com/odoo/owl)**: Always review the official changelog to stay updated.
 - **No need for `owl="1"` in templates**.
 - **No longer necessary to declare `/** @odoo-module */` in JS files**.
 - **QWeb `foreach` now requires a mandatory `t-key` attribute**.
