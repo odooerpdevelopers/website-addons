@@ -1,6 +1,7 @@
 {
     "name": "My eLearning Portal Component",
     "author": "OdooErpCloud",
+    "website": "https://campuscleverit.es",
     "version": "18.0.0.1.0",
     "summary": "Shows subscribed eLearning courses in the portal using OWL",
     "category": "Portal/eLearning",

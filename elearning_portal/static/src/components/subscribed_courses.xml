@@ -1,29 +1,29 @@
-<?xml version="1.0" encoding="UTF-8" ?>
+<?xml version="1.0" encoding="UTF-8"?>
 <templates xml:space="preserve">
 
     <t t-name="elearning_portal.SubscribedCoursesTemplate">
         <div class="subscribed-courses-list">
-            <!-- Mostrar mensaje de carga -->
+            <!-- Show loading message -->
             <t t-if="state.isLoading">
                 <div class="text-center text-muted py-3">
-                    <i class="fa fa-spinner fa-spin me-1"/> Cargando cursos...
+                    <i class="fa fa-spinner fa-spin me-1"/> Loading courses...
                 </div>
             </t>
 
-            <!-- Mostrar mensaje de error -->
+            <!-- Show error message -->
             <t t-elif="state.error">
                 <div class="alert alert-danger" role="alert">
                     <t t-esc="state.error"/>
                 </div>
             </t>
 
-            <!-- Mostrar lista de cursos si hay y no hay error/carga -->
+            <!-- Show course list if available and no error/loading -->
             <t t-elif="state.courses.length > 0">
                  <ul class="list-group">
                     <t t-foreach="state.courses" t-as="course" t-key="course.id">
-                         <li t-on-click.stop="showMe" class="list-group-item d-flex justify-content-between align-items-center">
+                         <li class="list-group-item d-flex justify-content-between align-items-center">
                             <t t-esc="course.name"/>
-                            <!-- Enlace al curso (ajusta la URL según tu estructura) -->
+                            <!-- Link to the course (adjust the URL according to your structure) -->
                             <a t-attf-href="/slides/{{ course.id }}" class="btn btn-sm btn-primary">
                                 Go to course <i class="fa fa-arrow-right"/>
                             </a>
@@ -32,10 +32,10 @@
                  </ul>
             </t>
 
-            <!-- Mostrar mensaje si no hay cursos -->
+            <!-- Show message if no courses are available -->
             <t t-else="">
                 <div class="alert alert-info" role="alert">
-                    Aún no estás suscrito a ningún curso.
+                    You are not subscribed to any courses yet.
                 </div>
             </t>
         </div>
