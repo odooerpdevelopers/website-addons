@@ -24,12 +24,7 @@ export class SubscribedCourses extends Component {
 
     // Hook that runs before the first render
     onWillStart(async () => {
-      if (!this.props.partnerId) {
-        console.warn("ID de Partner no proporcionado al componente de cursos.");
-        this.state.isLoading = false;
-        this.state.error = "No se pudo identificar al usuario.";
-        return;
-      }
+      
       await this.loadSubscribedCourses();
     });
   }
