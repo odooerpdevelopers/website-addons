@@ -4,7 +4,8 @@
 
 This module demonstrates how to implement parent-child component communication in Odoo 18 using OWL (Odoo Web Library). The example shows a parent panel component that changes its background color based on events triggered by child button components.
 
-<img src="./events.png" />
+### Access to Code
+[owl_events module](./owl_events)
 
 ## Technical Features
 
