@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <template id="owl_events_page" name="Página de Ejemplo de Eventos OWL">
+        <t t-call="website.layout">
+            <div id="wrap" class="oe_structure oe_empty">
+                <div class="container shadow" style="width: 1200px; min-height: 600px; box-shadow: 2px">
+                    <h2 class="text-center">OWL Events</h2>
+                    <owl-component name="owl_events.PanelColorComponent"/>
+                </div>
+            </div>
+        </t>
+    </template>
+</odoo>
