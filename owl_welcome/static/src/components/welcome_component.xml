@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<templates>
+    <t t-name="owl_welcome.WelcomeComponent">
+        <div class="container mt-4">
+            <div class="row justify-content-center">
+                <div class="col-md-8">
+
+                    <!-- Header -->
+                    <div class="text-center mb-4">
+                        <h1 class="display-5">🦉 Welcome to OWL World</h1>
+                        <p class="lead text-muted">
+                            ¡Tu primer componente OWL está funcionando!
+                        </p>
+                    </div>
+
+                    <!-- Skills Card -->
+                    <div class="card shadow-sm">
+                        <div class="card-header bg-primary text-white">
+                            <h4 class="mb-0 text-white">
+                                <i class="fa fa-check-circle me-2 text-success"></i>
+                                Skills Desbloqueadas
+                            </h4>
+                        </div>
+                        <div class="card-body">
+                            <ul class="list-group list-group-flush">
+                                <t t-foreach="state.skills" t-as="skill" t-key="skill.id">
+                                    <li  class="list-group-item d-flex align-items-center">
+                                        <i t-on-click="() => this.removeSkill(skill.id)" class="fa fa-trash"></i>
+                                        <span t-out="skill.text"/>
+                                    </li>
+                                </t>
+                            </ul>
+                        </div>
+                        <div class="card-footer text-center">
+                            <button class="btn btn-success btn-lg"
+                                    t-on-click="goToNextExercise">
+                                <i class="fa fa-rocket me-2"></i>
+                                Continuar al Ejercicio 2
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Info Footer -->
+                    <div class="text-center mt-4">
+                        <small class="text-muted">
+                            <strong>Conceptos OWL dominados:</strong>
+                            Component, Template, useState, Registry
+                        </small>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </t>
+</templates>
+
