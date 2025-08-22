@@ -11,7 +11,7 @@
         "views/templates.xml",
         "views/website_menus.xml",
     ],
-    "installable": False,
+    "installable": True,
     "assets": {
         "web.assets_frontend": [
             "website_form/static/src/js/*.js",
