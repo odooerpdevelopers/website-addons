@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<templates xml:space="preserve">
-    <div t-name="owl_events.ButtonColorComponent"
-         class="m-2" t-att-data-id="props.id">
-        <button t-attf-class="btn btn-lg btn-{{props.color}} border border-5"
-                t-on-click="onClick">Child Component</button>
-    </div>
-</templates>
